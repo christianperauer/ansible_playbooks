@@ -1,0 +1,12 @@
+---
+
+#Ansible Playbook to test Nexus CLI connectivity and Capabilities
+
+#Using Ansible to enable NXAPI
+
+- name: Enable NX-API
+   cisco.nxos.nxos_nxapi:
+       enable_http: yes
+       enable_https: yes
+   when: ansible_network_os == 'cisco.nxos.nxos'
+
